@@ -1512,8 +1512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPlayer_AvatarEntityGroup: {fileID: 1782376513}
-  mainPlayerTagName: Player
-  handsParentTagName: Hands
   clientPrefab: {fileID: 1611361787474004, guid: 817b13c5774679848ab4c5454ea2cf19, type: 3}
   centerAvatarSpawnLocation: {x: 0, y: 0, z: 0}
   clientReserveCount: 12
@@ -2242,6 +2240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pyrite-conversion-VMDScene001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca8912548207f0e4b869831b6d89646f, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8912548207f0e4b869831b6d89646f, type: 3}
 --- !u!20 &1145869454 stripped
@@ -2396,7 +2398,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportPlayer: {fileID: 1717507324}
-  leftEyeTag: LeftEye
   leftHand: {fileID: 1203216071}
   rightHand: {fileID: 2136809035}
   layerMask:
@@ -2625,6 +2626,63 @@ Transform:
   m_Father: {fileID: 1429055715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1514561032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1409372716693486840, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_Name
+      value: Tags
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 362.47073
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 270.70334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 37.99066
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409372716693486841, guid: d915959dfac566049ad91c6078994697, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d915959dfac566049ad91c6078994697, type: 3}
 --- !u!20 &1521456873 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8474694550977309894, guid: 53289847581eb3c4a9df5d9b7f47ddb9, type: 3}
@@ -2865,6 +2923,19 @@ MonoBehaviour:
   isRegistered: 0
   buttonID: -1
   thisEntityID: 0
+--- !u!135 &1978667405
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978667402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8.540001
+  m_Center: {x: -13.4, y: 12.9, z: -14.5}
 --- !u!1 &1979843675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,6 +2982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPrefab: {fileID: 9186645595324046843, guid: bf996e5ccd9500641a7489fee53d936d, type: 3}
   menu: {fileID: 0}
+  menuReferences: {fileID: 0}
   menuCanvasGroup: {fileID: 0}
   menuCanvas: {fileID: 0}
   hoverCursor: {fileID: 0}
@@ -2962,7 +3034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5bc10c916fff4948adcea1a6a023bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTagName: Player
   firstObjectGrabbed: {fileID: 0}
   originalParentOfFirstHandTransform: {fileID: 0}
   secondObjectGrabbed: {fileID: 0}

@@ -37,23 +37,28 @@ MonoBehaviour:
     m_Scopes:
     - com.de-panther
     - com.atteneder
+    - com.graingeridealab
     m_IsDefault: 0
     m_Capabilities: 0
-  m_UserSelectedRegistryName: 
+  m_UserSelectedRegistryName: OpenUPM
   m_UserAddingNewScopedRegistry: 0
   m_RegistryInfoDraft:
     m_ErrorMessage: 
     m_Original:
-      m_Id: scoped:Packages from jillejr
-      m_Name: Packages from jillejr
-      m_Url: https://npm.cloudsmith.io/jillejr/newtonsoft-json-for-unity
+      m_Id: scoped:OpenUPM
+      m_Name: OpenUPM
+      m_Url: https://package.openupm.com
       m_Scopes:
-      - jillejr
+      - com.de-panther
+      - com.atteneder
+      - com.graingeridealab
       m_IsDefault: 0
       m_Capabilities: 0
     m_Modified: 0
-    m_Name: Packages from jillejr
-    m_Url: https://npm.cloudsmith.io/jillejr/newtonsoft-json-for-unity
+    m_Name: OpenUPM
+    m_Url: https://package.openupm.com
     m_Scopes:
-    - jillejr
+    - com.de-panther
+    - com.atteneder
+    - com.graingeridealab
     m_SelectedScopeIndex: 0

@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Main.unity
-    guid: db0f5865241ebed45803d0dfda7baf6c
+    guid: 122b6da42e6b53748905cf482ae3c6de
   - enabled: 1
     path: Assets/Outdoors.unity
     guid: a455845e2617e2b4bac9db817668bcd3

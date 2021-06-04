@@ -17,6 +17,9 @@ TagManager:
   - DesktopCamera
   - Hand
   - Tool
+  - Drawing
+  - Interactable
+  - PlayerSpawnCenter
   layers:
   - Default
   - TransparentFX

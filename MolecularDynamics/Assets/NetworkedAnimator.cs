@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using Komodo.Runtime;
 
 public class NetworkedAnimator : MonoBehaviour
 {
-    public Animation localAnimation;
+    public Animator localAnimator;
 
     private MDAnimationState _localState;
 
@@ -20,7 +21,7 @@ public class NetworkedAnimator : MonoBehaviour
 
     void OnReset ()
     {
-        if (!localAnimation) 
+        if (!localAnimator) 
         {
             throw new System.Exception("You must assign a localAnimator in NetworkedAnimator.");
         }
@@ -28,17 +29,18 @@ public class NetworkedAnimator : MonoBehaviour
 
     void Awake ()
     {
-        if (!localAnimation) 
-        {
-            throw new System.Exception("You must assign a localAnimator in NetworkedAnimator.");
-        }
         
         GlobalMessageManager.Instance.Subscribe(_messageName, ReceiveAnimationState);
     }
 
     void Start ()
     {
-        localAnimation = GetComponent<Animation>();
+        localAnimator = GetComponent<Animator>();
+
+        if (!localAnimator) 
+        {
+            throw new System.Exception("You must assign a localAnimator in NetworkedAnimator.");
+        }
 
         StartCoroutine(SendLocalAnimationState());
     }
@@ -59,7 +61,7 @@ public class NetworkedAnimator : MonoBehaviour
 
         while (isCanonicallyPlaying) 
         {
-            var state = new MDAnimationState(localAnimation);
+            var state = new MDAnimationState(localAnimator);
 
             SendMessage(state);
 
@@ -78,85 +80,36 @@ public class NetworkedAnimator : MonoBehaviour
 
     /* Begin public local animation functions. These can be chained. */
 
-    public Animation Pause ()
+    public void Pause ()
     {
-        foreach (var childAnim in localAnimation)
-        {
-            _savedSpeed = childAnim.speed;
+        _savedSpeed = localAnimator.speed;
 
-            childAnim.speed = 0f;
-        }
+        localAnimator.speed = 0f;
 
-        isCanonicallyPlaying = false;
-
-        return localAnimation;
+        SetIsCanonicallyPlaying(false);
     }
 
     private void _RestoreSpeed () 
     {
-        foreach (var childAnim in localAnimation)
-        {
-            childAnim.speed = _savedSpeed;
-        }
+        localAnimator.speed = _savedSpeed;
     }
 
-    public Animation Play ()
+    public void Play ()
     {
         _RestoreSpeed();
 
-        localAnimation.Play();
-
         SetIsCanonicallyPlaying(true);
-
-        return localAnimation;
     }
 
-    public Animation Rewind () 
+    public Animator ChangeSpeed (float speed) 
     {
-        localAnimation.Rewind();
+        localAnimator.speed = speed;
 
-        return localAnimation;
-    }
-
-    public Animation Stop () 
-    {
-        // this will also rewind it to the start.
-
-        localAnimation.Stop();
-
-        return localAnimation;
-    }
-
-    public Animation ToggleLoop () 
-    {
-        if (localAnimation.wrapMode == WrapMode.Loop) 
-        {
-            localAnimation.wrapMode = ClampForever;
-
-            return localAnimation;
-        }
-
-        localAnimation.wrapMode = WrapMode.Loop;
-
-        return localAnimation;
-    }
-
-    public void Scrub (float time) 
-    {
-        localAnimation.playbackTime = time;
-
-        var state = new MDAnimationState(localAnimation);
+        var state = new MDAnimationState(localAnimator);
 
         SendMessage(state);
-    }
 
-    public Animation ChangeSpeed (float speed) 
-    {
-        localAnimation.speed = speed;
-
-        var state = new MDAnimationState(localAnimation);
-
-        SendMessage(state);
+        return localAnimator;
     }
 
     /* Receiving functions */
@@ -166,50 +119,29 @@ public class NetworkedAnimator : MonoBehaviour
         isCanonicallyPlaying = isPlaying;
     }
 
-    public Animation SetIsPlaying (bool isPlaying)
+    public Animator SetTime (float time)
     {
-        localAnimation.isPlaying = isPlaying;
+        localAnimator.playbackTime = time;
 
-        return localAnimation;
+        return localAnimator;
     }
 
-    public Animation SetTime (float time)
+    public Animator SetSpeed (float speed)
     {
-        localAnimation.playbackTime = time;
+        localAnimator.speed = speed;
 
-        return localAnimation;
-    }
-
-    public Animation SetSpeed (float speed)
-    {
-        foreach (AnimationState state in localAnimation)
-        {
-            state.speed = speed;
-        }
-
-        return localAnimation;
-    }
-
-    public Animation SetWrapMode (WrapMode mode) 
-    {
-        localAnimation.wrapMode = mode;
-
-        return localAnimation;
+        return localAnimator;
     }
 
     void ReceiveAnimationState (string stateAsString) {
 
-        var state = JsonUtility.FromJSON<MDAnimationState>(stateAsString);
+        var state = JsonUtility.FromJson<MDAnimationState>(stateAsString);
 
-        SetIsPlaying(state.isPlaying);
-
-        SetIsCanonicallyPlaying(state.isPlaying);
+        SetIsCanonicallyPlaying(state.speed == 0f);
 
         SetTime(state.playbackTime);
 
         SetSpeed(state.speed);
-
-        SetWrapMode(state.wrapMode);
 
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using Komodo.Runtime;
 
+[RequireComponent(typeof(Animator))]
 public class NetworkedAnimator : MonoBehaviour
 {
     public Animator localAnimator;
@@ -19,17 +20,8 @@ public class NetworkedAnimator : MonoBehaviour
 
     private string _messageName = "mdAnimationState";
 
-    void OnReset ()
-    {
-        if (!localAnimator) 
-        {
-            throw new System.Exception("You must assign a localAnimator in NetworkedAnimator.");
-        }
-    }
-
     void Awake ()
     {
-        
         GlobalMessageManager.Instance.Subscribe(_messageName, ReceiveAnimationState);
     }
 
@@ -37,17 +29,12 @@ public class NetworkedAnimator : MonoBehaviour
     {
         localAnimator = GetComponent<Animator>();
 
-        if (!localAnimator) 
-        {
-            throw new System.Exception("You must assign a localAnimator in NetworkedAnimator.");
-        }
-
-        StartCoroutine(SendLocalAnimationState());
+        StartCoroutine(SendAnimationState());
     }
 
     void OnDestroy () 
     {
-        StopCoroutine(SendLocalAnimationState());
+        StopCoroutine(SendAnimationState());
     }
 
     /*
@@ -55,7 +42,7 @@ public class NetworkedAnimator : MonoBehaviour
     * Automatically generates an animation state object from the state of the local animator.
     *
     */
-    IEnumerator SendLocalAnimationState ()
+    IEnumerator SendAnimationState ()
     {
         var waitTime = new WaitForSeconds(1f);
 

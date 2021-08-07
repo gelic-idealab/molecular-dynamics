@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6179268388916844502, guid: 53289847581eb3c4a9df5d9b7f47ddb9, type: 3}
+      propertyPath: modelData
+      value: 
+      objectReference: {fileID: 11400000, guid: e36d76595b7a3b84f8cd60efef1e2f5d, type: 2}
     - target: {fileID: 7294488287666184132, guid: 53289847581eb3c4a9df5d9b7f47ddb9, type: 3}
       propertyPath: m_Name
       value: MenuUI
@@ -2006,7 +2010,7 @@ MonoBehaviour:
   client_id: 0
   isTeacher: 1
   modelData: {fileID: 11400000, guid: db1c1f0b227417243a9386a0bffdac56, type: 2}
-  useEditorModelsList: 0
+  useEditorModelsList: 1
   socketIODisplay: {fileID: 156873146}
 --- !u!4 &883117593
 Transform:
@@ -3188,8 +3192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressDisplay: {fileID: 845803811}
-  loader: {fileID: 6336768844094401960}
-  modelData: {fileID: 11400000, guid: db1c1f0b227417243a9386a0bffdac56, type: 2}
+  loader: {fileID: 6336768844094401976}
+  modelData: {fileID: 11400000, guid: e36d76595b7a3b84f8cd60efef1e2f5d, type: 2}
   settings: {fileID: 11400000, guid: 560593fb59873b64492536d0729b6559, type: 2}
   networkedGameObjects: []
   doForceMobileMemoryLimit: 0
@@ -3207,6 +3211,7 @@ GameObject:
   - component: {fileID: 6336768844094401961}
   - component: {fileID: 6336768844094401960}
   - component: {fileID: 3536748085430673266}
+  - component: {fileID: 6336768844094401976}
   m_Layer: 0
   m_Name: ModelImport
   m_TagString: Untagged
@@ -3228,3 +3233,18 @@ Transform:
   m_Father: {fileID: 275040465}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6336768844094401976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336768844094401974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ce4f716b6f1ac4faa545d30795e6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  urlBase: https://vrcat-assets.s3.us-east-2.amazonaws.com/
+  logging: 0
+  failureObject: {fileID: 4818039777137756657, guid: f6fbb2f4bbb70d84fac5abf5c65fdfdd, type: 3}

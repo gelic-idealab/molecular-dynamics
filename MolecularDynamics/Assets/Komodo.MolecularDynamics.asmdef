@@ -1,0 +1,19 @@
+{
+    "name": "Komodo.MolecularDynamics",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c8d48eb46ff653f4bb1e43f7084ba24f",
+        "GUID:f0f33ff1ac108e645960b1e042b75303",
+        "GUID:3d4f0a107565e5642aad2af11c690fb3",
+        "GUID:774f0e7b520e24644b448f5ac7fa5d94"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -20,3 +20,10 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     euler_rotation: {x: 0, y: 0, z: 0}
     isWholeObject: 1
+  - name: animatedCube
+    id: 0
+    url: https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models/2.0/BoxAnimated/glTF-Binary/BoxAnimated.glb
+    scale: 1
+    position: {x: 0, y: 0, z: 0}
+    euler_rotation: {x: 0, y: 0, z: 0}
+    isWholeObject: 1

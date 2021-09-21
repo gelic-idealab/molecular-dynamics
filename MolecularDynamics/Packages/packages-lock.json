@@ -41,7 +41,7 @@
       "url": "https://package.openupm.com"
     },
     "com.graingeridealab.komodo": {
-      "version": "0.2.3-b1",
+      "version": "0.4.1-revC",
       "depth": 0,
       "source": "registry",
       "dependencies": {

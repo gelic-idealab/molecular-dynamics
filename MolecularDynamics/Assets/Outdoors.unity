@@ -391,22 +391,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca8912548207f0e4b869831b6d89646f, type: 3}
   m_PrefabInstance: {fileID: 172386561}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &172386563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172386562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be21f530a15a94c4482aa405e19b78d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  usePhysics: 0
-  isRegistered: 0
-  buttonID: -1
-  thisEntityID: 0
 --- !u!135 &172386564
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -420,6 +404,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 8.540001
   m_Center: {x: -13.4, y: 12.9, z: -14.5}
+--- !u!114 &172386565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172386562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b6ba18a85e3f7429f1a5aad8d4d698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonTemplate: {fileID: 1155860353542352, guid: c94fc7e06caed6d46847492cc9797b19, type: 3}
 --- !u!114 &172386566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,7 +2792,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 62.32878, y: 63.257256, z: 2.9108791}
   m_Center: {x: 30.66438, y: 31.128626, z: 0.95543873}
---- !u!114 &1295661237
+--- !u!114 &1295661238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2804,13 +2801,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1295661235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be21f530a15a94c4482aa405e19b78d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 74b6ba18a85e3f7429f1a5aad8d4d698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usePhysics: 0
-  isRegistered: 0
-  buttonID: -1
-  thisEntityID: 0
+  buttonTemplate: {fileID: 1155860353542352, guid: c94fc7e06caed6d46847492cc9797b19, type: 3}
 --- !u!1 &1303810577
 GameObject:
   m_ObjectHideFlags: 0

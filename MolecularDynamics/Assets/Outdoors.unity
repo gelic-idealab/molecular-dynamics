@@ -2679,6 +2679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: md-simulation-2021-09-16-glb
       objectReference: {fileID: 0}
+    - target: {fileID: -9202605092671148497, guid: 3f6a1d25b45e3484aa367d16ac7a66b8, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 2622171459798420718, guid: 3f6a1d25b45e3484aa367d16ac7a66b8, type: 3}
       propertyPath: m_DirtyAABB
       value: 0

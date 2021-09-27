@@ -33,10 +33,12 @@ During a Session
 ## Go to the session and enter it
 
 1. Choose `MSE 404`
-2. Choose `Miller Indices 2021-09-28 and 2021-09-30` by clicking on the words (not the icons).
+2. Choose the relevant session by clicking on the words (not the icons): 
+   1. `Miller Indices 2021-09-28 and 2021-09-30`
+   2. `Molecular Dynamics 2021-09-28 and 2021-09-30`
 3. Choose `> START NOW`
 4. Wait for the initial loading process to end.
-5. Press `VR` in the lower right corner. 
+5. Press `[ VR ]` in the lower right corner. 
 6. Put your VR headset on.
 
 ## Learn to use Komodo

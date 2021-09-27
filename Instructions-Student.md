@@ -129,3 +129,7 @@ Quickly flick the thumbstick left or right.
 [1]: due to a bug in v0.4.1, you will need to teleport twice before doing any height calibration to land at the correct height. Our apologies. 
 
 [2]: If you can't move an unlocked model, it might be because it is inside a locked model. This is a known issue. A recommended workaround is to hide the locked model, moved the unlocked model, and then show the locked model again. Our apologies.
+   
+---
+
+Link to this site: https://bit.ly/2XU2Iyx

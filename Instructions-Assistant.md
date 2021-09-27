@@ -63,3 +63,5 @@ There will be no output until the user puts on their headset.
 5. Uncheck the box for cursor display.
 6. If there is no sound input (Mic/Aux or something similar), press the `+` icon and select `Audio Input Capture`.
 7. Make sure the Audio Input Capture uses `Headset Microphone (# - Rift S)`.
+
+Link to this site: https://bit.ly/3m0Og09

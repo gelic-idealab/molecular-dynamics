@@ -57,32 +57,39 @@ There will be no output until the user puts on their headset.
 ## (optional) Set up screen recording with OBS
 
 **Make sure sound input is coming from the headset**
-In the main window, look at the Sources panel.
-Make sure Mic / Aux is in there.
-Click the gear icon in the lower right for settings.
-Test the audio input by tapping lightly on the headset.
+
+1. In the main window, look at the Sources panel.
+1. Make sure Mic / Aux is in there.
+1. Click the gear icon in the lower right for settings.
+1. Test the audio input by tapping lightly on the headset.
 
 **Remove Display Capture from the display input**
-In the main window, look at the Sources panel.
-Select Display Capture
-Press the minus [ - ] button to remove it.
+
+1. In the main window, look at the Sources panel.
+1. Select Display Capture
+1. Press the minus [ - ] button to remove it.
 
 **Add a Window Capture of Oculus Mirror to the display input**
-In the main window, look at the Sources panel.
-Press the plus [ + ] button 
-Select Window Capture
-Select Mirror Window
-Uncheck “Show Cursor”
+
+1. In the main window, look at the Sources panel.
+1. Press the plus [ + ] button 
+1. Select Window Capture
+1. Select Mirror Window
+1. Uncheck “Show Cursor”
 
 **Set the Output Format to MKV**
-Go to the Main Panel > Settings > Output 
-Set the format to MKV
+
+1. Go to the Main Panel > Settings > Output 
+1. Set the format to MKV
 
 **Test Recording**
-Press “Start Recording” 
-Put on the headset and do stuff and make sounds
-Take off the headset
-Press “Finish Recording”
-Check the MKV file
 
-Link to this site: https://bit.ly/3m0Og09
+1. Press “Start Recording” 
+1. Put on the headset and do stuff and make sounds
+1. Take off the headset
+1. Press “Finish Recording”
+1. Check the MKV file
+
+---
+
+Link to these instructions: https://bit.ly/3m0Og09

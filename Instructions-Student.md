@@ -8,7 +8,9 @@ During a Session
 1. Open Firefox Reality via Viveport
 1. Log into provided Komodo account
 2. Go to session and enter it
-3. Learn to use Komodo
+3. Learn to use Komodo in VR
+5. Exit the session
+4. Learn to use Komodo in Spectator-only Mode
 
 ## Open Zoom and ensure mic settings are correct
 
@@ -41,13 +43,15 @@ During a Session
 5. Press `[ VR ]` in the lower right corner. 
 6. Put your VR headset on.
 
-## Learn to use Komodo
+## Learn to use Komodo in VR Mode
 
 ### Learn controller basics
-
+Hold the controller like this image:
+![how-to-hold-oculus-touch-v2-controller-sarah-tew-cnet](https://user-images.githubusercontent.com/8165314/135506460-50ef9b91-51cf-4ec3-85db-eda9ad365cb5.png)
+Image: Sarah Tew/CNET
 1. Make sure the `A/B/X/Y` buttons are on the inside and the thumbsticks are on the outside.
-2. Place your index finger on the trigger (the buttons that face away from you).
-3. Place your middle finger on the grip (the buttons on the sides).
+2. Place your index finger on the trigger (the single large, round button that faces away from you).
+3. Place your middle finger on the grip (the single, large round button on the sides).
 5. Push `A/B/X/Y` with your thumb.
 4. Push the thumbstick with your thumb like a button.
 6. Push the hamburger button and the Oculus button with your thumb.
@@ -123,6 +127,26 @@ Quickly flick the thumbstick left or right.
 ## Exit the session
 
 1. Press the hamburger button on your left controller. 
+   
+## Learn to use Komodo in Spectator-only Mode
+
+### Learn keyboard movement controls
+1. Use `W / A / S / D` to strafe (move forward, left, back, right)
+1. Use `Q / E` to rotate left / right
+2. Use `2 / 3` to rotate up / down
+   
+### Learn mouse movement controls
+1. Drag the middle mouse button to pan up / down / left / right
+1. Scroll in the window to quickly move forward / back
+
+### Learn limitations of spectator-only mode
+   
+1. The following actions are unimplemented:
+     1. Moving a model
+     1. Scaling a model
+     1. Drawing
+     1. Erasing
+1. Keep in mind that locking, unlocking, hiding, and showing models is synchronized for everyone.
 
 ## Footnotes
 
